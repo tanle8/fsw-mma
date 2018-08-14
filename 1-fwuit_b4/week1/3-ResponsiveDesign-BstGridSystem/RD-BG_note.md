@@ -1,4 +1,4 @@
-#
+# 
 
 ## Bootstrap Grid
 
@@ -121,3 +121,5 @@ After saving all the changes, you can do a Git commit with the message "Bootstra
 ## Conclusion
 
 In this exercise, we reviewed `responsive design` and the `Bootstrap grid system`.
+
+.
