@@ -28,9 +28,8 @@ Project Title
 
 3. Market Survey
     - __Do__ a `survey` of the Web to find about ***five*** web sites that might have _similar_ ideas as yours.
-    - Briefly compare the features of these applications with your application idea.
+    - _Briefly_ compare the features of these applications with your application idea.
 
 4. References
-    - Give references to any material / websites / books etc. relevant to your application idea
+    - Give `references` to any material / websites / books etc. relevant to your application idea
     - Give the links to the websites relevant to your idea, that you listed in the section above.
-
