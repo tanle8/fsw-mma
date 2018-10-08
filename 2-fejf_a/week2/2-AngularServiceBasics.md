@@ -76,3 +76,91 @@ At the end of this course you will be able to:
 
 ## Exercise: Angular Service Basics
 
+### Objectives and Outcomes
+
+In this exercise you will:
+
+- __create__ a _new_ Angular `service` and
+- __inject__ it _into_ your `application`.
+- You will then make use of the service in the `components`.
+
+At the end of this exercise you will be able to:
+
+- Implement a service and inject into your application
+- Make use of the service in a component
+
+### Adding a Service
+
+Create a folder named _services_ in the _src/app_ folder.
+To add a service to your application using Angular CLI, type the following at the prompt:
+
+    ```bash
+    ng generate service services/dish
+    ```
+
+- This will create two new files in the services folder named dish.service.ts and dish.service.spec.ts.
+- Open dish.service.ts and update its contents as shown below:
+
+    ```ts
+    . . .
+
+    import { Dish } from '../shared/dish';
+    import { DISHES } from '../shared/dishes';
+
+    . . .
+
+      getDishes(): Dish[] {
+        return DISHES;
+      }
+    . . .
+    ```
+
+- Then add the service to the app.module.ts file as follows:
+
+    ```ts
+    . . .
+
+    import { DishService } from './services/dish.service';
+
+    @NgModule({
+    . . .
+
+      providers: [DishService],
+
+    . . .
+
+    ```
+
+### Using the Service
+
+- Now update menu.component.ts file to __make use__ of the service as follows:
+
+    ```ts
+    . . .
+
+    import { DishService } from '../services/dish.service';
+
+    . . .
+
+    export class MenuComponent implements OnInit {
+
+      dishes: Dish[];
+
+      selectedDish: Dish;
+
+      constructor(private dishService: DishService) { }
+
+      ngOnInit() {
+        this.dishes = this.dishService.getDishes();
+      }
+
+    . . .
+
+    }
+    ```
+
+- Check that your application is still working correctly in the browser. Do a Git commit with the message "Basic Service".
+
+## Conclusions
+
+In this exercise you learnt to create a service and add it to your application. Thereafter you learnt to use it in a component.
