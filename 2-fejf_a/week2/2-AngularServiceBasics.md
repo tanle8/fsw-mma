@@ -98,7 +98,7 @@ To add a service to your application using Angular CLI, type the following at th
     ng generate service services/dish
     ```
 
-- This will create two new files in the services folder named dish.service.ts and dish.service.spec.ts.
+- This will create _two_ new files in the services folder named _dish.service.ts_ and _dish.service.spec.ts_.
 - Open dish.service.ts and update its contents as shown below:
 
     ```ts
@@ -115,7 +115,7 @@ To add a service to your application using Angular CLI, type the following at th
     . . .
     ```
 
-- Then add the service to the app.module.ts file as follows:
+- Then add the service to the _app.module.ts_ file as follows:
 
     ```ts
     . . .
@@ -163,4 +163,25 @@ To add a service to your application using Angular CLI, type the following at th
 
 ## Conclusions
 
-In this exercise you learnt to create a service and add it to your application. Thereafter you learnt to use it in a component.
+In this exercise, you learnt to:
+
+- __create__ a `service` and
+- __add__ it to your `application`.
+- Thereafter you learnt to __use__ it in a component.
+
+## Angular Service Basics: Additional Resources
+
+Angular Resources
+
+- [Angular Services](https://angular.io/docs/ts/latest/guide/architecture.html#!#services)
+- [Angular Dependency Injection](https://angular.io/docs/ts/latest/guide/dependency-injection.html)
+
+Other Resources
+
+- [Software design pattern](https://en.wikipedia.org/wiki/Software_design_pattern)
+- [Model–view–controller](https://en.wikipedia.org/wiki/Model-view-controller)
+- [Model-View-ViewModel]()
+- [Model-View-Whatever]()
+- [Design Patterns: Elements of Reusable Object-Oriented Software](http://c2.com/cgi/wiki?DesignPatternsBook)
+- [Web Application](https://en.wikipedia.org/wiki/Web_application)
+- [Dependency Injection (Wikipedia)](https://en.wikipedia.org/wiki/Dependency_injection)
