@@ -314,7 +314,115 @@ In this exercise you will continue to develop the Angular application as a singl
 
 In this exercise you developed the Angular application further by __integrating__ the `components` into a single page application.
 
+## Angular Router: Parameters
+
+Using the Angular Router, we have already learned how we can navigate from one view to another view using the `routerLink` directive to specify the link.
+
+And also the router module, enabling us with the specification of the path, to __navigate__ to the `views` of the _different_ `components`.
+
+Now, let's take an example of the _dishdetail_ `component`. So far, the _dishdetail_ `component` has been working by __receiving__ the _details_ of the _specific_ `dish` that it needs to display from the menu component.
+
+But this was facilitated because the dishdetail `component` had a property that was sending in the value. And then we were using the input decorator for the variable inside the dishdetail component to get hold of that value that was being passed in from the menu component.
+
+Now, when you have these components being routed to using a router, this connection between the components no longer exists. So we need to leverage the Angular Router to be able to pass information from one component to the other component. And this is usually done in the form of parameters. Parameters that can be either specified as route parameters, as we will learn a little bit later, or query parameters.
+
+### Angular Routes
+
+- Paths specified as a URL
+- Paths can also carry parameter values:
+    - e.g., `/dishdetail/42` where 42 is a route parameter
+- Route parameters specified in the path definition as a token
+    -e.g., path: `dishdetail/:id` where id is the token
+
+### Route Parameters
+
+How do we pass parameters?
+
+- Route parameters can be specified using a link parameter arrat while specifying the link
+    - e.g., `<a *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]">`
+- Can also be used within a method
+    - e.g., `this.router.navigate(['/dishdetail', dish.id]);`
+
+### ActivatedRoute Service
+
+Router service that provides useful information about the routes, including:
+
+- `url` - An Observable of the route path(s), represented as an array of strings for each part of the route path.
+- `params` - An Observable that contains the required and optional parameters specific to the route
+- `queryParams` - An Observable that contains the query parameters available to all routes
+
 ## Exercise (Instructions): Single Page Applications Part 2
+
+### Objectives and Outcomes
+
+In this exercise you will __integrate__ the _dishdetail_ `component` into your application.
+
+You will:
+
+- use a route `parameter` in the URL to pass in the details of the selected dish to the dishdetail component.
+
+At the end of this exercise you will be able to:
+
+- Configure the routes in your router module to enable the use of route parameters within the URL to pass information to a component.
+
+### Updating Routes
+
+- Open the _routes.ts_ and add the following route to it:
+
+    ```ts
+    { path: 'dishdetail'/:id, component: DishdetailComponent }
+    ```
+- Open _menu.component.html_ and update it as follows. Also remove the `<app-dishdetail>` from the template.
+
+    ```html
+    <mat-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]">
+    ```
+
+### Updating DishDetail Component
+
+- Open _dishdetail.component.ts_ and update it as follows:
+
+    ```ts
+    . . .
+    import { DishService } from '../services/dish.service';
+
+    import { Params, ActivatedRoute } from '@angular/router';
+    import { Location } from '@angular/common';
+
+    . . .
+
+    export class DishdetailComponent implements OnInit {
+
+      dish: Dish;
+
+      constructor(private dishservice: DishService,
+                  private route: ActivatedRoute,
+                  private location: Location) { }
+
+      ngOnInit() {
+        const id = +this.route.snapshot.params['id'];
+        this.dish = this.dishservice.getDish(id);
+      }
+
+      goBack(): void {
+        this.location.back();
+      }
+    }
+    ```
+
+Then open _dishdetail.component.html_ and update it as follows:
+
+    ```html
+
+    ```
+
+### Update Footer Links
+
+- Open _footer.component.html_ and update the footer links also to provide the same navigation as the header toolbar.
+
+### Conclusions
+
+In this exercise you have seen the use of route parameters within the URL to pass information to another component.
 
 ## Single Page Applications: Additional Resources
 
