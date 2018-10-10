@@ -428,7 +428,7 @@ In this exercise you have seen the use of route parameters within the URL to pas
 
 Angular Resources
 
-- Angular Routing and Navigation
+- [Angular Routing and Navigation](https://angular.io/docs/ts/latest/guide/router.html)
 
 Other Resources
 
