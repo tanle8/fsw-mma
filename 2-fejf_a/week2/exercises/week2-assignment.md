@@ -21,14 +21,14 @@ This assignment requires you to complete the following tasks.
 
 In this task you will be:
 
-- Adding a new _Leader_ `Service` that will _provide the details of the corporate leadership of the restaurant_.
+- Adding a new _Leader_ `Service` that will provide the details of the corporate leadership of the restaurant.
 
 The details of the corporate leaders are given in the JavaScript object array below:
 
-- __Create__ a new class called _Leader_ in a file named _leader.ts_ in the shared folder based on the structure of the JavaScript object array given in _leaders.txt_ above,
-- __Create__ a new constant called _LEADERS_ based on the Leader class in a file named _leaders.ts_ in the _shared_ folder and `export` it,
-- __Create__ a new service named _leader_ that will provide the details of the corporate leaders given in _leaders.txt_ above, and
-- __Update__ the _AppModule_ to include the new service and make it available for the rest of the application.
+- [x] __Create__ a new class called _Leader_ in a file named _leader.ts_ in the _shared_ folder based on the structure of the JavaScript object array given in _leaders.txt_ above,
+- [x] __Create__ a new constant called _LEADERS_ based on the Leader class in a file named _leaders.ts_ in the _shared_ folder and `export` it,
+- [x] __Create__ a new service named _leader_ that will __provide__ the _details_ of the corporate leaders given in _leaders.txt_ above, and
+- [x] __Update__ the _AppModule_ to include the new service and make it available for the rest of the application.
 
 ### Task 2
 
@@ -36,7 +36,7 @@ In this task you will:
 
 - __Integrate__ the `AboutComponent` into the single page application.
 
-To get started, first update the _about.component.html_ as follows:
+To get started, first __update__ the _about.component.html_ as follows:
 
 ```html
 <div class="container"
@@ -102,13 +102,13 @@ To get started, first update the _about.component.html_ as follows:
 </div>
 ```
 
-- __Update__ the _about.component.ts_ file to:
+- [x] __Update__ the _about.component.ts_ file to:
     - fetch the details of the leaders and
     - make them available to the template,
-- __Update__ the _about.component.html_ file to:
-    - display the details of the corporate leaders using the mdList Angular Material component.
-- __Update__ the _routes_ to include the route to a new path named "aboutus", and
-- __Update__ the _links_ in the header and footer to enable navigation to the About Us view.
+- [x] __Update__ the _about.component.html_ file to:
+    - display the details of the corporate leaders using the `mdList` Angular Material component.
+- [x] __Update__ the _routes_ to include the route to a new path named "aboutus", and
+- [x] __Update__ the _links_ in the header and footer to enable navigation to the About Us view.
 
 ### Task 3
 
@@ -127,19 +127,29 @@ Upon completion of the assignment, your submission will be reviewed based on the
 
 __Task 1:__
 
-- [] A new Leader class has been added to the application.
-- [] A new LEADERS constant has been added to the application.
-- [] A new leader service has been added to the application and it makes the details of all leaders, a specific leader and a featured leader available.
-- [] The AppModule has been updated to include the leader service.
+- [x] A new Leader class has been added to the application.
+- [x] A new LEADERS constant has been added to the application.
+- [x] A new leader service has been added to the application and it makes the details of all leaders, a specific leader and a featured leader available.
+- [x] The AppModule has been updated to include the leader service.
 
 __Task 2:__
 
-- Updated about.component.ts to fetch the leaders' details and make them available to the template.
-- Updated about.component.html to show the details of the corporate leaders.
-- Updated routes to include a new path to the AboutComponent.
-- Updated the links in header and footer to enable navigation to the About Us view.
+- [x] Updated _about.component.ts_ to fetch the leaders' details and make them available to the template.
+- [x] Updated _about.component.html_ to show the details of the corporate leaders.
+- [x] Updated _routes_ to include a new path to the `AboutComponent`.
+- [x] Updated the _links_ in header and footer to enable navigation to the `About Us` view.
 
 __Task 3:__
 
-- Updated home.component.ts to fetch and make the details of the featured leader available to the template.
-- Updated home.component.html to show the details of the featured leader using the Angular Material card component.
+- [x] Updated home.component.ts to fetch and make the details of the featured leader available to the template.
+- [x] Updated home.component.html to show the details of the featured leader using the Angular Material card component.
+
+## Additional Resources
+
+Angular Resources
+
+- [Angular Data Binding](https://angular.io/docs/ts/latest/guide/architecture.html#!#data-binding)
+- [Angular Template Syntax](https://angular.io/docs/ts/latest/guide/template-syntax.html)
+- [Angular Services](https://angular.io/docs/ts/latest/guide/architecture.html#!#services)
+- [Angular Dependency Injection](https://angular.io/docs/ts/latest/guide/dependency-injection.html)
+- [Angular Routing and Navigation](https://angular.io/docs/ts/latest/guide/router.html)

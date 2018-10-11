@@ -94,9 +94,9 @@ At the end of this exercise you will be able to:
 Create a folder named _services_ in the _src/app_ folder.
 To add a service to your application using Angular CLI, type the following at the prompt:
 
-    ```bash
-    ng generate service services/dish
-    ```
+```bash
+ng generate service services/dish
+```
 
 - This will create _two_ new files in the services folder named _dish.service.ts_ and _dish.service.spec.ts_.
 - Open dish.service.ts and update its contents as shown below:
@@ -145,7 +145,6 @@ To add a service to your application using Angular CLI, type the following at th
     export class MenuComponent implements OnInit {
 
       dishes: Dish[];
-
       selectedDish: Dish;
 
       constructor(private dishService: DishService) { }
