@@ -86,8 +86,14 @@ Open _login.component.html_ file and __add__ in the `template reference variable
       . . .
     ```
 
-- Save all the changes and do a Git commit with the message "Template Forms Part 2"
-
 ### Conclusions
 
 In this exercise you have demonstrated the various form validation features available with template forms.
+
+## Angular Resources
+
+- [Angular Forms](https://angular.io/guide/forms)
+- [Form Validation](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- [Angular Material Dialog Component](https://material.angular.io/components/component/dialog)
+- [Angular Material Input](https://material.angular.io/components/component/input)
+- [Angular Material Checkbox](https://material.angular.io/components/component/checkbox)
