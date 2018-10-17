@@ -13,7 +13,7 @@ At the end of this lesson you will be able to:
 
 ## Exercise (Instructions): Angular and RxJS Part 1
 
-__Objectives and Outcomes__
+Objectives and Outcomes:
 
 In this exercise you will:
 
@@ -99,7 +99,7 @@ Objectives and Outcomes:
 
 In this exercise you will
 
-- Learn to use the `params observable` available through the `ActivatedRoute` service in Angular _to __redesign__ a `component`_.
+- Learn to use the `params` observable available through the `ActivatedRoute` service in Angular _to __redesign__ a `component`_.
 
 At the end of this exercise you will be able to:
 
@@ -108,7 +108,46 @@ At the end of this exercise you will be able to:
 
 ### Updating the Dish Service
 
+Update dish.service.ts by adding the following method to the service:
+
+```ts
+getDishIds(): Observable<number[] | any> {
+  return Observable.of(DISHES.map(dish => dish.id));
+}
+```
+
 ### Update the Dish Detail Component
+
+Update the _dishdetail.component.ts_ as follows:
+
+```ts
+. . .
+
+import { switchMap } from 'rxjs/operators';
+
+. . .
+
+  dishIds: number[];
+  prev: number;
+  next: number;
+
+  . . .
+
+
+  ngOnInit() {
+    this.dishservice.getDishIds().subscribe(dishIds => this.dishIds = dishIds);
+    this.route.params.pipe(switchMap((params: Params) => this.dishservice.getDish(+params['id'])))
+    .subscribe(dish => { this.dish = dish; this.setPrevNext(dish.id); });
+  }
+
+  setPrevNext(dishId: number) {
+    const index = this.dishIds.indexOf(dishId);
+    this.prev = this.dishIds[(this.dishIds.length + index - 1) % this.dishIds.length];
+    this.next = this.dishIds[(this.dishIds.length + index + 1) % this.dishIds.length];
+  }
+
+  . . .
+```
 
 ### Updating the Dish Detail Template
 
