@@ -151,9 +151,26 @@ import { switchMap } from 'rxjs/operators';
 
 ### Updating the Dish Detail Template
 
+- Update _dishdetail.component.html_ as follows:
+
+```html
+. . .
+
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/dishdetail', prev]"><span class="fa fa-chevron-left fa-lg"></span></button>
+        . . .
+
+        <span class="flex-spacer"></span>
+        <button mat-button [routerLink]="['/dishdetail', next]"><span class="fa fa-chevron-right fa-lg"></span></button>
+      </mat-card-actions>
+
+      . . .
+
+```
+
 ### Conclusions (Part 2)
 
-
+In this exercise you learnt how to use a _built-in_ `observable` within Angular to implement new features within your application.
 
 ## Exercise (Instructions): Angular and RxJS Part 3
 
@@ -172,23 +189,33 @@ At the end of this exercise you will be able to:
 
 ### Add Form Validation
 
+- Open _contact.component.ts_ and update the `Form Model` as shown below:
+
+- Continuing with _contact.component.ts_, you will now:
+  - __Subscribe__ to the Angular `Form` observable named _valueChanges_ and
+  - __Initiate__ `form validation` as follows:
+
+- Next update the form in _contact.component.html_ as follows:
+
 ### Conclusion (Part 3)
+
+In this exercise you used an Angular forms observable and subscribed to it to initiate form validation in code.
 
 ## Angular and RxJS: Additional Resources
 
 ### Angular Resources
 
-[The RxJS Library]()
-[ActivatedRoute and Params Observable]()
-[Reactive Form Validation with Observables]()
-[Angular Reactive Forms]()
-[Angular Reactive Forms Form Builder]()
-[Angular Reactive Form Validators]()
+[The RxJS Library](https://angular.io/docs/ts/latest/guide/server-communication.html#!#rxjs-library)
+[ActivatedRoute and Params Observable](https://angular.io/docs/ts/latest/guide/router.html#!#activated-route)
+[Reactive Form Validation with Observables](https://angular.io/docs/ts/latest/cookbook/form-validation.html#!#reactive)
+[Angular Reactive Forms](https://angular.io/docs/ts/latest/guide/reactive-forms.html)
+[Angular Reactive Forms Form Builder](https://angular.io/docs/ts/latest/guide/reactive-forms.html#!#formbuilder)
+[Angular Reactive Form Validators](https://angular.io/docs/ts/latest/guide/reactive-forms.html#!#validators)
 
 ### Other Resources
 
-[RxJS]()
-[Learn RxJS]()
-[RxJS 5 Thinking Reactively | Ben Lesh]()
-[The introduction to Reactive Programming you've been missing]()
-[Paul Simon - You Can Call Me Al (YouTube Video)]()
+[RxJS](http://reactivex.io/rxjs/)
+[Learn RxJS](https://www.learnrxjs.io/)
+[RxJS 5 Thinking Reactively | Ben Lesh](https://www.youtube.com/watch?v=3LKMwkuK0ZE)
+[The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
+[Paul Simon - You Can Call Me Al (YouTube Video)](https://www.youtube.com/watch?v=uq-gYOrU8bA)
