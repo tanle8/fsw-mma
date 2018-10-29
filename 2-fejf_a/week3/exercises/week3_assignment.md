@@ -54,15 +54,15 @@ You need to complete the following:
 
 In this task you will:
 
-- enable real-time preview of the user's comments in the Angular application in the dishdetail view. This should be displayed in the same format as the regular comments.
+- Enable real-time preview of the user's comments in the Angular application in the dishdetail view. This should be displayed in the same format as the regular comments.
 
 You need to complete the following tasks:
 
 - [] __Show__ a preview just above the form using the same format as the regular comments on the page. The preview should not include the submission date as it is not yet added to the comment.
 - [] __Display__ the preview only if the user has entered valid information into the form. --> using `[hidden]` tag
 - [] Upon submitting the _valid_ comment, the comment should join the regular comments on the page.
-    - To do this you need to map the Form model into the data model.
-    - The date for the comment should be set automatically upon submission of the form.
+    - To do this you need to __map__ the `Form model` into the `data model`.
+    - The `date` for the comment should be set automatically upon submission of the form.
     - Both these actions should be done in the function that handles the form submission in code.
         - You can use the JavaScript array `.push` method to add the comment into the comments array of the dish.
         - You can use the JavaScript date (see [here](https://www.w3schools.com/jsref/jsref_toisostring.asp) for an example) method to set the date to ISO string.

@@ -87,9 +87,13 @@ Update _menu.component.ts_ as follows to __subscribe__ to the `observable` _retu
     this.dishService.getDishes().subscribe(dishes => this.dishes = dishes);
 ```
 
-- Similarly update [x] _about.component.ts_, [x] _dishdetail.component.ts_ and [] _home.component.ts_ to __subscribe__ to the `observables` _from_ the `services`.
+- Similarly update:
+  - [x] _about.component.ts_,
+  - [x] _dishdetail.component.ts_ and
+  - [] _home.component.ts_
+  to __subscribe__ to the `observables` _from_ the `services`.
 
-In this exercise you learn to use observables within your services and components.
+In this exercise you learn to use `observables` within your `services` and `components`.
 
 ### Conclusions (Part 1)
 
