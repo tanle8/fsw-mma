@@ -120,7 +120,7 @@ At the end of this exercise you will be able to:
 import { trigger, state, style, animate, transition } from '@angular/animations';
 ```
 
-- [] __Define__ a _new_ animation `trigger` within the Component `decorator` as follows:
+- [x] __Define__ a _new_ animation `trigger` within the Component `decorator` as follows:
 
 ```ts
 . . .
@@ -166,6 +166,117 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 ```ts
 ```
 
-Conclusions Exercise 1
+### Conclusions Exercise 1
 
 - In this exercise you learnt to use Angular animations support within your application to add new features to your views.
+
+## Exercise (Instructions): Angular Animations Part 2
+
+Objectives and Outcomes
+
+- In this exercise you will continue to:
+    - Use the animation support available in the Angular framework to add a few new features to your Angular application.
+
+At the end of this exercise you will be able to:
+
+- __Define__ _new_ `animations` using the support available in the Angular framework
+- __Apply__ the `animations` to the `views` within your components
+
+### Refactoring the Code
+
+- [x] If we use ___multiple animations___ in our application, it's better to organize the code better. So we will __refactor__ our code.
+- [x] __Create__ a new folder named _animations_ in the _app_ folder, and create a file named _app.animation.ts_ in that folder.
+- [x] __Add__ the following code to _app.animation.ts_ to create a new `factory function` that supplies the animation:
+
+```ts
+import { trigger, state, style, animate, transition } from '@angular/animations';
+
+export function visibility() {
+    return trigger('visibility', [
+        state('shown', style({
+            transform: 'scale(1.0)',
+            opacity: 1
+        })),
+        state('hidden', style({
+            transform: 'scale(0.5)',
+            opacity: 0
+        })),
+        transition('* => *', animate('0.5s ease-in-out'))
+    ]);
+}
+```
+
+- Update _dishdetail.component.ts_ as follows to make use of the animation factory function defined above:
+
+```ts
+. . .
+import { visibility } from '../animations/app.animation';
+
+. . .
+
+  animations: [
+    visibility()
+  ]
+  . . .
+```
+
+- Remove the following line from _dishdetail.component.ts_ since it's already included in _app.animation.ts_:
+
+```ts
+import { trigger, state, style, animate, transition } from '@angular/animations';
+```
+
+### Adding Animation Support for Route Changes
+
+- [x] Open _app.animation.ts_ and __add__ the following to it to include a new `factory`:
+
+```ts
+export function flyInOut() {
+    return trigger('flyInOut', [
+        state('*', style({ opacity: 1, transform: 'translateX(0)'})),
+        transition(':enter', [
+            style({ transform: 'translateX(-100%)', opacity: 0 }),
+            animate('500ms ease-in')
+        ]),
+        transition(':leave', [
+            animate('500ms ease-out', style({ transform: 'translateX(100%)', opacity: 0}))
+        ])
+    ]);
+}
+```
+
+- __Import__ the `flyInOut` into _menu.component.ts_ and then __define__ a new `animation trigger` within the Component decorator in _menu.component.ts_ to introduce a `view transition` when the menu component view is routed to in the application:
+
+```ts
+. . .
+import { flyInOut } from '../animations/app.animation';
+
+. . .
+  host: {
+    '[@flyInOut]': 'true',
+    'style': 'display: block;'
+  },
+  animations: [
+    flyInOut()
+  ]
+  . . .
+```
+
+- [] Apply the same updates to
+    - [] _home.component.ts_,
+    - [] _about.component.ts_ and
+    - [] _contact.component.ts_
+
+- __Import__ `flyInOut` and then __add__ the _host property_ and the `flyInOut()` also to _dishdetail.component.ts_.
+
+### Animation to Render View from Fetched Data
+
+- Open _app.animation.ts_ and add the following to it to include a new factory:
+
+- Furthermore import the new function and add the following to the animations in menu.component.ts, about.component.ts, dishdetail.component.ts and home.component.ts:
+
+- Then apply the `[@expand]` attribute to all those elements within the views of the above components where the data is being fetched from the service before rendering the view.
+
+### Conclusions exercise Part 2
+
+In this exercise we learnt more about Angular animations and how they can be applied while entering and leaving views.
