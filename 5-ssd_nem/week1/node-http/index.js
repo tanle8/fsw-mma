@@ -12,7 +12,7 @@ const server = http.createServer((require, response) => {
 
     response.statusCode = 200;
     response.setHeader('Content-Type', 'text/html');
-    response.end('<html><body><h1>Hello, World!</h1></body></html>  ');
+    response.end('<html><body><h1>Hello, World!</h1></body></html>');
 });
 
 // Start our server
