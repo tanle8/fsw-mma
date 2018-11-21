@@ -9,5 +9,5 @@ In this lesson you will learn more about the Node `HTTP` core module. You will:
 
 At the end of this lesson, you will be able to:
 
-- Create a simple HTTP server using the Node HTTP core module
-- Create a web server to serve static HTML files from a folder
+- Create a simple `HTTP server` using the Node ___HTTP___ core module
+- Create a `web server` to serve static `HTML files` from a folder
