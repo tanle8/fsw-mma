@@ -6,7 +6,7 @@ const port = 3000;
 // Setup a server
 // require parameter is the incoming HTTP request to the server
 const server = http.createServer((require, response) => {
-    // the request object give us access to the header of the 
+    // the request object give us access to the header of the
     // incoming HTTP request
     console.log(require.headers);
 
