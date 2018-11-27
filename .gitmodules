@@ -1,0 +1,6 @@
+[submodule "node-express"]
+	path = node-express
+	url = git@github.com:tanle8/node-express.git
+[submodule "5-ssd_nem/week2/conFusionServer"]
+	path = 5-ssd_nem/week2/conFusionServer
+	url = ../conFusionServer.git
