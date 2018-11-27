@@ -4,3 +4,6 @@
 [submodule "5-ssd_nem/week2/conFusionServer"]
 	path = 5-ssd_nem/week2/conFusionServer
 	url = ../conFusionServer.git
+[submodule "5-ssd_nem/week1/node-express/node-express"]
+	path = 5-ssd_nem/week1/node-express/node-express
+	url = C:\\Users\\tanld\\Documents\\course\\web\\fsw-mma\\5-ssd_nem\\week1\\node-express
