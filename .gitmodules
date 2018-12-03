@@ -7,3 +7,6 @@
 [submodule "5-ssd_nem/week1/node-express/node-express"]
 	path = 5-ssd_nem/week1/node-express/node-express
 	url = C:\\Users\\tanld\\Documents\\course\\web\\fsw-mma\\5-ssd_nem\\week1\\node-express
+[submodule "5-ssd_nem/week2/node-mongoose"]
+	path = 5-ssd_nem/week2/node-mongoose
+	url = git@github.com:tanle8/node-mongoose.git
