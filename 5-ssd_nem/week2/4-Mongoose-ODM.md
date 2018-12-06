@@ -6,6 +6,16 @@ At the end of this exercise, you will be able to:
 
 - Perform Database operations with Mongoose methods
 
-### Mongoose Operations
+## Mongoose ODM: Additional Resources
 
-### Adding Sub-documents to a Document
+### Mongoose Resources
+
+[Mongoose](http://mongoosejs.com/)
+[Mongoose Documentation](http://mongoosejs.com/docs/guide.html)
+[Mongoose Schemas](http://mongoosejs.com/docs/guide.html)
+[Mongoose Models](http://mongoosejs.com/docs/models.html)
+[Mongoose Sub-documents](http://mongoosejs.com/docs/subdocs.html)
+[Mongoose-currency](https://www.npmjs.com/package/mongoose-currency)
+
+### Other Resources
+[Multiple collections vs Embedded documents](http://openmymind.net/Multiple-Collections-Versus-Embedded-Documents/#1)
